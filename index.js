@@ -64,3 +64,11 @@ $(document).ready(function () {
       // autoplaySpeed: 1000,
     });
   });
+
+// PARTNERS 
+const partnerButton = document.querySelector('.partner__button')
+const partnerRow2 = document.querySelector('.partner__row2--none')
+partnerButton.addEventListener('click', function() {
+    partnerRow2.classList.toggle('up')
+    console.log('123')
+})

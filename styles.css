@@ -66,7 +66,7 @@ a {
 }
 
 .container {
-  max-width: 1152px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 .container__medium {
@@ -116,10 +116,10 @@ a {
   color: rgba(0, 0, 0, 0.45);
 }
 .button {
-  border: none;
   background-color: var(--primary);
   border-radius: 2px;
   padding: 12px 24px;
+  border: 1px solid var(--primary);
   color: #fff;
   cursor: pointer;
 }
@@ -166,21 +166,21 @@ a {
   align-items: center;
 } */
 .search {
-  position : relative;
+  position: relative;
   width: 40px;
   height: 40px;
   background: #fff;
   border-radius: 60px;
   transition: 0.5s;
   /* box-shadow : 0 0 0 5px #2573ef; */
-  overflow:hidden;
+  overflow: hidden;
 }
 .search.active {
   width: 240px;
 }
 .search .icon {
   position: absolute;
-  top : 0;
+  top: 0;
   left: 0;
   width: 40px;
   height: 40px;
@@ -190,23 +190,23 @@ a {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  cursor:pointer;
+  cursor: pointer;
 }
 .search .input {
   position: relative;
-  border-bottom: .5px solid #999;
+  border-bottom: 0.5px solid #999;
   width: 200px;
   height: 40px;
   left: 40px;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 .search .input input {
   background: transparent;
-  
+
   position: absolute;
-  top : 0;
+  top: 0;
   width: 100%;
   height: 100%;
   border: none;
@@ -217,32 +217,32 @@ a {
 
 .clear {
   position: absolute;
-  top : 50%;
-  transform : translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
   width: 15px;
   height: 15px;
-  right: 15px; 
+  right: 15px;
   /* background: #ff0;      */
-  cursor:pointer;
+  cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items: center;                                                                                                                                                                                                                                                                                                  ;
+  align-items: center;
 }
 .clear::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 1px;
   height: 15px;
   background: #999;
-  transform : rotate(45deg);
+  transform: rotate(45deg);
 }
 .clear::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 1px;
   height: 15px;
   background: #999;
-  transform : rotate(315deg);
+  transform: rotate(315deg);
 }
 .open {
   display: block;
@@ -354,11 +354,12 @@ a {
 
 .templates__content {
   padding-bottom: 60px;
-  margin-bottom: 48px;
+  margin: 0 -20px;
 }
 .templates {
   padding-block: 80px;
   text-align: center;
+  overflow: hidden;
 }
 .teamplates__heading {
   color: #fff;
@@ -372,11 +373,13 @@ a {
   display: none;
 }
 .templates__header {
-  background-color: #fff;
+  padding: 0 20px;
+  background-color: transparent;
 }
 .template__intro {
   padding: 20px 24px;
   text-align: start;
+  background-color:#fff;
 }
 .template__title {
   margin-bottom: 8px;
@@ -385,14 +388,17 @@ a {
   color: rgba(0, 0, 0, 0.45);
   display: none;
 }
-
+.template_button {
+  margin-top: 48px;
+}
 .template__img {
   width: 100%;
 }
 
-.slick-initialized .slick-slide {
-  margin:0 20px;
-}
+/* .slick-initialized .slick-slide {
+  padding: 0 20px;  : chính là : templates__header
+  background-color: transparent;
+} */
 .slick-arrow {
   position: absolute;
   top: 50%;
@@ -442,7 +448,7 @@ a {
   transition: all 0.2s linear;
 }
 .slick-dots .slick-active button {
-  background-color: #5555FF;
+  background-color: #5555ff;
 }
 
 .section__templates {
@@ -597,6 +603,7 @@ a {
   padding: 24px;
   background-color: #fafafa;
 }
+
 .price__title,
 .price__description {
   margin-bottom: 16px;
@@ -645,7 +652,23 @@ a {
 .price__button {
   margin-bottom: 8px;
 }
-
+.price__ribbon {
+  position: relative;
+}
+.price__ribbon::before {
+  position: absolute;
+  content: "";
+  background-image: url(Assets/images/badge_ribbon.png);
+  background-size: cover;
+  width: 100px;
+  height: 50px;
+  top: 24px;
+  right: -7px;
+}
+.text__bold {
+  font-weight: 800;
+  font-size: 32px;
+}
 /* STORE */
 .section__store {
   background-color: #110942;
@@ -799,7 +822,4 @@ a {
   margin-left: 29.26px;
 }
 
-
 /* TEMPLATE */
-
-
