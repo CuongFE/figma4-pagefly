@@ -31,6 +31,14 @@
     --small-text-lineheight: 1.57;
     --smaller-text-lineheight: 1.67;
   }
+  @font-face {
+    src: url(Assets/images/SFProDisplay/SF-Pro-Display/SF-Pro-Display-Bold.otf);
+    font-family: display-bold;
+  }
+  @font-face {
+    src: url(Assets/images/SFProDisplay/SF-Pro-Display/SF-Pro-Display-Semibold.otf);
+    font-family: display-semibold;
+  }
   .container {
     padding-inline: 40px;
   }
@@ -59,6 +67,7 @@
     font-family: Prodisplay;
     font-weight: var(--font-medium);
     line-height: var(--text-lineheight);
+    color: rgba(0, 0, 0, 0.85);
   }
   .small__text {
     font-size: var(--small-text);
@@ -201,7 +210,6 @@
     display: block;
   }
 
-
   /* ===== OPTION =======*/
   .option__content {
     max-width: 100%;
@@ -226,6 +234,7 @@
   .option__description {
     margin-bottom: 36px;
     font-weight: 700;
+    font-family: display-semibold;
   }
   .option__button {
     margin-top: 18px;
@@ -383,6 +392,9 @@
     height: auto;
     background-color: #fff;
   }
+  .price__item--bold {
+    font-family: displaybold;
+  }
   /* ===== STORE =======*/
   .store__heading {
     color: #fff;
@@ -423,7 +435,7 @@
   .program__header:last-child {
     margin-bottom: 0px;
   }
-  .program__title {
+  .program__title--big {
     font-size: 26px;
     line-height: 1.4;
     margin-bottom: 50px;
@@ -448,6 +460,9 @@
   }
   .footer__item {
     margin-bottom: 12px;
+  }
+  .footer__link {
+    color: #fff;
   }
   .footer__description {
     width: 100%;
@@ -510,6 +525,14 @@
     --text-lineheight: 1.5;
     --small-text-lineheight: 1.57;
     --smaller-text-lineheight: 1.67;
+  }
+  @font-face {
+    src: url(Assets/images/SFProDisplay/SF-Pro-Display/SF-Pro-Display-Bold.otf);
+    font-family: display-bold;
+  }
+  @font-face {
+    src: url(Assets/images/SFProDisplay/SF-Pro-Display/SF-Pro-Display-Semibold.otf);
+    font-family: display-semibold;
   }
   .container,
   .container__medium {
@@ -630,6 +653,9 @@
     padding: 16px 20px;
     margin-top: 32px;
   }
+  .review__item {
+    text-align: start;
+  }
   .sale {
     display: flex;
     flex-direction: column;
@@ -659,6 +685,7 @@
   }
   .reason__heading {
     margin-bottom: 48px;
+    text-align: start;
   }
   .reason__image {
     margin-right: 25px;
@@ -723,6 +750,7 @@
   .option__description {
     margin-bottom: 40px;
     font-weight: 700;
+    font-family: display-semibold;
   }
   .option__button {
     margin-top: 8px;
@@ -762,14 +790,14 @@
     background-color: inherit;
   }
   .partner__image__row1 {
-    padding-inline: 20px;
+    padding-inline: 0px 8px;
     margin-bottom: 16px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
   .partner__image__row2 {
-    padding-inline: 20px;
+    padding-inline: 0px 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -834,9 +862,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 40px;
+    margin-top:40px;
   }
   .support__heading {
-    margin-bottom: 40px;
+    max-width: 335px;
+    margin: 0 auto;
   }
   .support__image {
     margin-bottom: 16px;
@@ -885,6 +915,9 @@
     top: 16px;
     right: -7px;
   }
+  .price__item--bold {
+    font-family: displaybold;
+  }
 
   /* ===== STORE =======*/
   .store__heading {
@@ -895,6 +928,9 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 24px;
+  }
+  .store__title {
+    padding: 20px 24px;
   }
 
   /* ===== CUSTOMER =======*/
@@ -930,17 +966,30 @@
   .program__header:last-child {
     margin-bottom: 0px;
   }
-  .program__title {
+  .program__title--big {
     font-size: 24px;
     line-height: 1.33;
     font-weight: 600;
     margin-bottom: 40px;
+  }
+  .program__title {
+      font-size: 20px;
+      line-height: 1.4;
   }
   .program__img {
     margin-block: 16px;
   }
   .program__content {
     margin-bottom: 48px;
+  }
+  .program__description {
+    color: rgba(0, 0, 0, 0.85);
+  }
+  .customer__detail--mobile {
+    display: block;
+  }
+  .customer__detail--desktop {
+    display: none;
   }
   /* ===== EXPLORE =======*/
   .explore {
@@ -959,6 +1008,13 @@
   }
   .footer__item {
     margin-bottom: 8px;
+  }
+  .footer__link {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.57;
+    font-weight:400;
+    font-family: protext;
   }
   .footer__description {
     width: 100%;
