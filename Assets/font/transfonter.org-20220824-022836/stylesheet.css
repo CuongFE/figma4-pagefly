@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("SFProDisplay-Bold.woff2") format("woff2"),
+    url("SFProDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("SFProDisplay-Medium.woff2") format("woff2"),
+    url("SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("SFProDisplay-Semibold.woff2") format("woff2"),
+    url("SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /*=====Colors ======*/
+
+  --dark-purple: #110942;
+  --pastel: #f0f2ff;
+  --primary: #5555ff;
+
+  /*===== Fonts and typography ======*/
+  --font-primary: "SFProDisplay";
+  --font-secondary: "Poppins", sans-serif;
+  --bigger-heading: 56px;
+  --big-title: 44px;
+  --normal-title: 20px;
+  --navbar: 16px;
+  /*===== Fonts text======*/
+  --normal-text: 16px;
+  --bigger-text: 18px;
+  --small-text: 14px;
+  --smaller-text: 12px;
+
+  /*===== Font weight ======*/
+  --font-medium: 400;
+  --font-semi-bold: 600;
+
+  /*===== line height ======*/
+  --heading-lineheight: 1.143;
+  --title-lineheight: 1.27;
+  --normal-lineheight: 1.4;
+  --bigger-text-lineheight: 1.56;
+  --text-lineheight: 1.5;
+  --small-text-lineheight: 1.57;
+  --smaller-text-lineheight: 1.67;
+}

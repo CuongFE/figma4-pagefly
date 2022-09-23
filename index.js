@@ -18,12 +18,29 @@ navToggle.addEventListener('click', function() {
 
 
 // Search Box
+// const icon = document.querySelector('.icon')
+// const search = document.querySelector('.search')
+
+// icon.addEventListener('click', function() {
+//     search.classList.toggle('active')
+//     console.log('123')
+// })
+
+// search box làm lại
 const icon = document.querySelector('.icon')
 const search = document.querySelector('.search')
+const input = document.querySelector('.input')
+const clearInput = document.querySelector('.clear')
 
 icon.addEventListener('click', function() {
-    search.classList.toggle('active')
+    input.classList.add('appear')
+    input.classList.remove('hide')
     console.log('123')
+})
+
+clearInput.addEventListener('click', function() {
+  input.classList.add('hide')
+  console.log('123')
 })
 
 

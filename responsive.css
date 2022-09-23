@@ -8,6 +8,8 @@
     --primary: #5555ff;
 
     /*===== Fonts and typography ======*/
+    --font-primary: "SFProDisplay";
+    --font-secondary: "Poppins", sans-serif;
     --bigger-heading: 46px;
     --big-title: 38px;
     --normal-title: 19px;
@@ -32,13 +34,50 @@
     --smaller-text-lineheight: 1.67;
   }
   @font-face {
-    src: url(Assets/images/SFProDisplay/SF-Pro-Display/SF-Pro-Display-Bold.otf);
+    src: url(Assets/SFProDisplay/FontsFree-Net-SFProDisplay-Bold.ttf);
     font-family: display-bold;
   }
   @font-face {
-    src: url(Assets/images/SFProDisplay/SF-Pro-Display/SF-Pro-Display-Semibold.otf);
+    src: url(Assets/SFProDisplay/FontsFree-Net-SFProDisplay-Bold.ttf);
     font-family: display-semibold;
   }
+  @font-face {
+    src: url(Assets/SFProDisplay/FontsFree-Net-SFProText-Regular.ttf);
+    font-family: protext;
+  }
+  @font-face {
+    font-family: "SFProDisplay";
+    src: url("SFProDisplay-Bold.woff2") format("woff2"),
+      url("SFProDisplay-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "SFProDisplay";
+    src: url("SFProDisplay-Medium.woff2") format("woff2"),
+      url("SFProDisplay-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "SFProDisplay";
+    src: url("SFProDisplay-Semibold.woff2") format("woff2"),
+      url("SFProDisplay-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  body {
+    padding: 0;
+    font-family: var(--font-primary);
+    /* thẻ p sẽ ăn theo font-family của thẻ body */
+    -webkit-font-smoothing: antialiased;
+  }
+
   .container {
     padding-inline: 40px;
   }
@@ -56,35 +95,37 @@
     font-size: var(--big-title);
     font-weight: var(--font-semi-bold);
     line-height: var(--title-lineheight);
+    font-family: var(--font-secondary);
   }
   .normal__title {
     font-size: var(--normal-title);
     font-weight: var(--font-semi-bold);
     line-height: var(--normal-lineheight);
+    font-family: var(--font-secondary);
   }
   .normal__text {
     font-size: var(--normal-text);
-    font-family: Prodisplay;
+    font-family: var(--font-primary);
     font-weight: var(--font-medium);
     line-height: var(--text-lineheight);
     color: rgba(0, 0, 0, 0.85);
   }
   .small__text {
     font-size: var(--small-text);
-    font-family: Prodisplay;
+    font-family: var(--font-primary);
     font-weight: var(--font-medium);
     line-height: var(--small-text-lineheight);
   }
   .smaller__text {
     font-size: var(--smaller-text);
-    font-family: Prodisplay;
+    font-family: var(--font-primary);
     font-weight: var(--font-medium);
     line-height: var(--smaller-text-lineheight);
     color: rgba(0, 0, 0, 0.45);
   }
   .bigger__text {
     font-size: var(--bigger-text);
-    font-family: Prodisplay;
+    font-family: var(--font-primary);
     font-weight: var(--font-medium);
     line-height: var(--bigger-text-lineheight);
     color: rgba(0, 0, 0, 0.45);
@@ -194,7 +235,7 @@
     margin-bottom: 64px;
   }
   .reason__image {
-    margin-right: 25px;
+    margin-right: 24px;
   }
   /* ===== TEMPLATE =======*/
   .templates__content {
@@ -233,7 +274,7 @@
   }
   .option__description {
     margin-bottom: 36px;
-    font-weight: 700;
+    font-weight: 600;
     font-family: display-semibold;
   }
   .option__button {
@@ -393,7 +434,7 @@
     background-color: #fff;
   }
   .price__item--bold {
-    font-family: displaybold;
+    font-weight: 700;
   }
   /* ===== STORE =======*/
   .store__heading {
@@ -463,6 +504,7 @@
   }
   .footer__link {
     color: #fff;
+    font-family: "protext";
   }
   .footer__description {
     width: 100%;
@@ -503,6 +545,8 @@
     --primary: #5555ff;
 
     /*===== Fonts and typography ======*/
+    --font-primary: "SFProDisplay";
+    --font-secondary: "Poppins", sans-serif;
     --bigger-heading: 36px;
     --big-title: 32px;
     --normal-title: 18px;
@@ -534,6 +578,11 @@
     src: url(Assets/images/SFProDisplay/SF-Pro-Display/SF-Pro-Display-Semibold.otf);
     font-family: display-semibold;
   }
+  @font-face {
+    src: url(Assets/SFProDisplay/FontsFree-Net-SFProText-Regular.ttf);
+    font-family: protext;
+  }
+
   .container,
   .container__medium {
     padding-inline: 20px;
@@ -542,39 +591,41 @@
     font-size: var(--bigger-heading);
     font-weight: var(--font-semi-bold);
     line-height: var(--heading-lineheight);
+    font-family: "Poppins", sans-serif;
   }
   .title {
     font-size: var(--big-title);
     font-weight: var(--font-semi-bold);
     line-height: var(--title-lineheight);
+    font-family: "Poppins", sans-serif;
   }
   .normal__title {
     font-size: var(--normal-title);
     font-weight: var(--font-semi-bold);
     line-height: var(--normal-lineheight);
+    font-family: "Poppins", sans-serif;
   }
   .normal__text {
     font-size: var(--normal-text);
-    font-family: Prodisplay;
+    font-family: var(--font-primary);
     font-weight: var(--font-medium);
     line-height: var(--text-lineheight);
   }
   .small__text {
     font-size: var(--small-text);
-    font-family: Prodisplay;
+    font-family: var(--font-primary);
     font-weight: var(--font-medium);
     line-height: var(--small-text-lineheight);
   }
   .smaller__text {
     font-size: var(--smaller-text);
-    font-family: Prodisplay;
+    font-family: var(--font-primary);
     font-weight: var(--font-medium);
     line-height: var(--smaller-text-lineheight);
     color: rgba(0, 0, 0, 0.45);
   }
   .bigger__text {
     font-size: var(--bigger-text);
-    font-family: Prodisplay;
     font-weight: var(--font-medium);
     line-height: var(--bigger-text-lineheight);
     color: rgba(0, 0, 0, 0.45);
@@ -705,6 +756,9 @@
   .template__description {
     display: block;
   }
+  .template__title {
+    margin-bottom: 8px;
+  }
   .teamplates__heading--block {
     display: block;
   }
@@ -750,10 +804,10 @@
   .option__description {
     margin-bottom: 40px;
     font-weight: 700;
-    font-family: display-semibold;
   }
   .option__button {
     margin-top: 8px;
+    font-weight: 700;
   }
   /* ===== EXPERIENCE =======*/
   .experience__content {
@@ -804,6 +858,16 @@
     flex-wrap: wrap;
     animation-name: partner;
     animation: partner ease 1s;
+  }
+  .partner__image__row3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .partner__row3--mobile {
+    display: flex;
   }
   @keyframes partner {
     0% {
@@ -862,7 +926,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 40px;
-    margin-top:40px;
+    margin-top: 40px;
   }
   .support__heading {
     max-width: 335px;
@@ -916,7 +980,8 @@
     right: -7px;
   }
   .price__item--bold {
-    font-family: displaybold;
+    font-family: var(--font-primary);
+    font-weight: 700;
   }
 
   /* ===== STORE =======*/
@@ -973,8 +1038,8 @@
     margin-bottom: 40px;
   }
   .program__title {
-      font-size: 20px;
-      line-height: 1.4;
+    font-size: 20px;
+    line-height: 1.4;
   }
   .program__img {
     margin-block: 16px;
@@ -1013,7 +1078,7 @@
     color: #fff;
     font-size: 14px;
     line-height: 1.57;
-    font-weight:400;
+    font-weight: 400;
     font-family: protext;
   }
   .footer__description {

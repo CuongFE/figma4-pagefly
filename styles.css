@@ -1,8 +1,40 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Pattaya&family=Poppins:wght@400;500;600&display=swap");
-@import url(./Assets/images/SFProDisplay/FontsFree-Net-SFProDisplay-Regular-1.ttf);
-@import url(./Assets/images/SFProDisplay/FontsFree-Net-SFProDisplay-Bold.ttf);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("./Assets/font/SFProDisplay-Bold.woff2") format("woff2"),
+    url("./Assets/font/SFProDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
-/*=== Variables CSS ====*/
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("./Assets/font/SFProDisplay-Medium.woff2") format("woff2"),
+    url("./Assets/font/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("./Assets/font/SFProDisplay-Semibold.woff2") format("woff2"),
+    url("./Assets/font/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  src : url(Assets/SFProDisplay/FontsFree-Net-SFProText-Regular.ttf);
+  font-family : protext;
+}
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Pattaya&family=Poppins:wght@400;500;600&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); */
+
+/*=== Variables CSS xxxxxx====*/
 /*=====Variables CSS======*/
 :root {
   /*=====Colors ======*/
@@ -12,6 +44,8 @@
   --primary: #5555ff;
 
   /*===== Fonts and typography ======*/
+  --font-primary: "SFProDisplay";
+  --font-secondary: "Poppins", sans-serif;
   --bigger-heading: 56px;
   --big-title: 44px;
   --normal-title: 20px;
@@ -44,7 +78,9 @@
 
 body {
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
+  /* thẻ p sẽ ăn theo font-family của thẻ body */
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -58,19 +94,15 @@ ul {
 a {
   text-decoration: none;
 }
-@font-face {
-  src: url(Assets/images/SFProDisplay/FontsFree-Net-SFProDisplay-Regular-1.ttf);
-  font-family: Prodisplay;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+  font-weight: bold;
 }
-@font-face {
-  src: url(Assets/images/SFProDisplay/FontsFree-Net-SFProText-Regular.ttf);
-  font-family: protext;
-}
-@font-face {
-  src: url(Assets/images/SFProDisplay/SF-Pro-Display/SF-Pro-Display-Bold.otf);
-  font-family: displaybold;
-}
-
 .container {
   max-width: 1152px;
   margin: 0 auto;
@@ -84,12 +116,14 @@ a {
   font-size: var(--bigger-heading);
   font-weight: var(--font-semi-bold);
   line-height: var(--heading-lineheight);
+  font-family: "Poppins", sans-serif;
   color: rgba(0, 0, 0, 0.85);
 }
 .title {
   font-size: var(--big-title);
   font-weight: var(--font-semi-bold);
   line-height: var(--title-lineheight);
+  font-family: var(--font-secondary);
   color: rgba(0, 0, 0, 0.85);
 }
 .normal__title {
@@ -97,17 +131,17 @@ a {
   font-weight: var(--font-semi-bold);
   line-height: var(--normal-lineheight);
   color: rgba(0, 0, 0, 0.85);
+  font-family: "Poppins", sans-serif;
 }
 .normal__text {
   font-size: var(--normal-text);
-  font-family: Prodisplay;
+  font-family: var(--font-primary);
   font-weight: var(--font-medium);
   line-height: var(--text-lineheight);
   color: rgba(0, 0, 0, 0.85);
 }
 .small__text {
   font-size: var(--small-text);
-  font-family: Prodisplay;
   font-weight: var(--font-medium);
   line-height: var(--small-text-lineheight);
 }
@@ -120,7 +154,7 @@ a {
 }
 .bigger__text {
   font-size: var(--bigger-text);
-  font-family: Prodisplay;
+  font-family: var(--font-primary);
   font-weight: var(--font-medium);
   line-height: var(--bigger-text-lineheight);
   color: rgba(0, 0, 0, 0.45);
@@ -146,6 +180,24 @@ a {
   text-align: center;
 }
 
+.heading--light {
+  color: white;
+}
+.text--center {
+  text-align: center;
+}
+
+/* @media (min-width: 1200px) {
+  .medium-text--left{
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .large-text--left{
+    text-align: left;
+  }
+} */
+
 /* =====NAVBAR =======*/
 
 .nav__list {
@@ -154,8 +206,8 @@ a {
   align-items: center;
 }
 .nav__link {
-  color: #000;
   font-weight: 600;
+  font-family: var(--font-secondary);
 }
 /* .search-box_input {
   background-color: trasparent;
@@ -175,14 +227,13 @@ a {
   display: flex;
   align-items: center;
 } */
-.search {
+/* .search {
   position: relative;
   width: 40px;
   height: 40px;
   background: #fff;
   border-radius: 60px;
   transition: 0.5s;
-  /* box-shadow : 0 0 0 5px #2573ef; */
   overflow: hidden;
 }
 .search.active {
@@ -199,7 +250,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 99;
   cursor: pointer;
 }
 .search .input {
@@ -214,7 +265,6 @@ a {
 }
 .search .input input {
   background: transparent;
-
   position: absolute;
   top: 0;
   width: 100%;
@@ -232,6 +282,95 @@ a {
   width: 15px;
   height: 15px;
   right: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clear::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #999;
+  transform: rotate(45deg);
+}
+.clear::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #999;
+  transform: rotate(315deg);
+} */
+/* Làm lại nút search box */
+.search {
+  position: static;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 60px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.search .icon {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  cursor: pointer;
+}
+.search .input {
+  position: absolute;
+  border-bottom: 0.5px solid #999;
+  background: #fff;
+  width: 100%;
+  height: 88px;
+  top: -100%;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+.search .input input {
+  background: transparent;
+  position: absolute;
+  width: 50%;
+  border: 1px solid #999;
+  border-radius: 8px;
+  outline: none;
+  font-size: 18px;
+  padding: 10px;
+  margin: auto;
+  transition: all 1s ease;
+}
+.search .input input:hover {
+  border: 1px solid var(--primary);
+}
+.input.appear {
+  top: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.clear {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  right: 26%;
   /* background: #ff0;      */
   cursor: pointer;
   display: flex;
@@ -254,6 +393,7 @@ a {
   background: #999;
   transform: rotate(315deg);
 }
+
 .open {
   display: block;
 }
@@ -319,6 +459,7 @@ a {
   font-size: 12px;
   line-height: 1.67;
   font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 .sale {
   display: flex;
@@ -394,9 +535,9 @@ a {
   text-align: start;
   background-color: #fff;
 }
-.template__title {
+/* .template__title {
   margin-bottom: 8px;
-}
+} */
 .template__description {
   color: rgba(0, 0, 0, 0.45);
   display: none;
@@ -545,6 +686,9 @@ a {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.partner__row3--mobile {
+  display: none;
+}
 .partner__content {
   margin-bottom: 80px;
 }
@@ -629,6 +773,10 @@ a {
   font-size: 28px;
   line-height: 1.28px;
   font-weight: var(--font-semi-bold);
+  font-family: "Poppins", sans-serif;
+}
+.price__month--color {
+  color: rgba(0, 0, 0, 0.45);
 }
 .price__list {
   background-color: #fff;
@@ -745,11 +893,11 @@ a {
 }
 .program__step {
   display: grid;
-  grid-template-columns: repeat(3 , 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 40px;
 }
 .program__header {
-  display: flex; 
+  display: flex;
   flex-direction: column;
 }
 .program__head {
@@ -844,5 +992,3 @@ a {
 .footer__social--item {
   margin-left: 29.26px;
 }
-
-/* TEMPLATE */
